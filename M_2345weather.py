@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from dengfenglai.config import *
+from config import *
 import os
 import requests
 import re
