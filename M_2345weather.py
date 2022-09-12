@@ -33,7 +33,7 @@ def getEveryMonthWeatherList(cityCode,date,Mcount=MYCOUNT):
         if r.status_code == 200:
             # print(r.text)
             # print(r.headers)
-
+            r.encoding = 'gbk'
             pattern=r'var weather_str=(.*?),{}]'
             newPattern=re.compile(pattern,re.S)
             myAllList = re.findall(newPattern, r.text)[0] #得到完整的就送格式数据
